@@ -1,0 +1,54 @@
+
+<!--
+  Formulaire pour créer un nouveau membre avec les champs :
+  id, name, cin, type et createDate.
+
+  Le formulaire est lié à un FormGroup appelé memberForm.
+  Lorsqu'il est soumis, la méthode onSubmit() est appelée.
+-->
+
+<div class="form-container">
+
+  <h1>Create Member</h1>
+
+  <form [formGroup]="memberForm" (ngSubmit)="onSubmit()">
+
+    <!-- ID -->
+    <mat-form-field appearance="outline">
+      <mat-label>ID</mat-label>
+      <input matInput type="number" formControlName="id">
+    </mat-form-field>
+
+    <!-- Name -->
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+
+    <!-- CIN -->
+    <mat-form-field appearance="outline">
+      <mat-label>CIN</mat-label>
+      <input matInput formControlName="cin">
+    </mat-form-field>
+
+    <!-- Type -->
+    <mat-form-field appearance="outline">
+      <mat-label>Type</mat-label>
+      <input matInput formControlName="type">
+    </mat-form-field>
+
+    <!-- Create Date -->
+    <mat-form-field appearance="outline">
+      <mat-label>Create Date</mat-label>
+      <input matInput type="date" formControlName="createDate">
+    </mat-form-field>
+
+    <!-- Submit button -->
+    <button mat-raised-button type="submit">
+      Create
+    </button>
+
+  </form>
+
+</div>
+```
